@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "main": "dist/cjs/index.js",
+  "typings": "dist/typings",
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run dist",
+    "clean": "rm -rf ./dist",
+    "lint": "eslint .",
+    "dist": "tsc --pretty",
+    "dev": "tsc -w --pretty",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/parser": "^2.31.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "babel-eslint": "^10.1.0",
+    "codecov": "^3.6.5",
+    "eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "jest": "^26.0.1",
+    "ts-jest": "^25.5.1",
+    "tslib": "^1.11.2",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!*.tsbuildinfo",
+    "!**/__tests__",
+    "README.md",
+    "LICENSE"
+  ],
+  "name": "jest-hooks",
+  "description": "Jest hooks",
+  "license": "MIT",
+  "author": "Boris Kaul <localvoid@gmail.com> (https://github.com/localvoid)",
+  "homepage": "https://github.com/localvoid/jest-hooks",
+  "bugs": "https://github.com/localvoid/jest-hooks/issues",
+  "repository": "github:localvoid/jest-hooks"
+}

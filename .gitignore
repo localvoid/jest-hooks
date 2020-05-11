@@ -1,0 +1,14 @@
+dist
+coverage
+.ignore
+.TODO
+
+node_modules
+.jest
+
+.DS_Store
+.idea
+.vscode
+
+npm-debug.log
+yarn-error.log
