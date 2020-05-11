@@ -131,8 +131,6 @@ describe("timers", () => {
 
 `useMockFn(implementation)` creates a mock function (`jest.fn()`) and resets it after each test.
 
-`useSpyOn(object, method, accessType)` creates a spy object (`jest.spyOn()`) and resets it after each test.
-
 ```js
 import { useResetModules, useModule, useMockFn } from "jest-hooks";
 
@@ -151,6 +149,9 @@ describe("function", () => {
   });
 });
 ```
+
+`useSpyOn(object, method, accessType)` creates a spy object (`jest.spyOn()`) and resets it after each test.
+
 
 ```js
 import { useResetModules, useModule, useSpyOn } from "jest-hooks";
