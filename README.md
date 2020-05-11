@@ -2,7 +2,6 @@
   <img width="622" height="457" src="https://localvoid.github.io/jest-hooks/example.png">
 </p>
 
-
 `jest-hooks` is a collection of hooks for testing with [Jest](https://jestjs.io/) library.
 
 ## Hooks
@@ -95,15 +94,13 @@ import { useResetModules, useTestState } from "jest-hooks";
 useResetModules();
 const m = useModule("module-with-global-state");
 
-describe("module", () => {
-  it("should modify global state", () => {
-    m.set(1);
-    expect(m.get()).toBe(1);
-  });
+it("should modify global state", () => {
+  m.set(1);
+  expect(m.get()).toBe(1);
+});
 
-  it("should reset global state", () => {
-    expect(m.get()).not.toBe(1);
-  });
+it("should reload module", () => {
+  expect(m.get()).toBe(0);
 });
 ```
 
